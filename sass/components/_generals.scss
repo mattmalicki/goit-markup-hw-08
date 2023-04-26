@@ -1,0 +1,110 @@
+body {
+  font-family: $mainFontFamily;
+  color: $main-color;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding: 94px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  //   centers page
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: $logoFontFamily;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  &--blue-web {
+    color: $functional-color;
+  }
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  //   transition
+  transition-property: color, background;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+}
+
+.link {
+  outline: none;
+  text-decoration: none;
+  color: $main-color;
+
+  // transition
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $functional-color;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding-top: 16px;
+  padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    color: $icons-color-one;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    /* transition */
+
+    transition-property: color, background-color;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      background-color: $functional-color;
+      color: $white-color;
+    }
+  }
+}

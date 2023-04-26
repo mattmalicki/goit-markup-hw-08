@@ -1,0 +1,38 @@
+.clients {
+  &__header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-bottom: 50px;
+  }
+
+  &__list {
+    gap: 30px;
+  }
+
+  &__logo {
+    width: 170px;
+    height: 92px;
+    border: solid 1px;
+    border-color: $icons-color-one;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $icons-color-one;
+
+    /* transition */
+
+    transition-property: border-color, color;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $functional-color;
+      border-color: $functional-color;
+    }
+  }
+}

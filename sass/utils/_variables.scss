@@ -1,0 +1,29 @@
+// fonts
+$mainFontFamily: "Roboto", sans-serif;
+$logoFontFamily: "Raleway", sans-serif;
+// colors
+$main-color: #212121;
+$second-color: #757575;
+$functional-color: #2196f3;
+$black-color: #000000;
+$white-color: #ffffff;
+$footer-mail-phone-color: rgba(256, 256, 256, 0.6);
+$icons-color-one: #afb1b8;
+// background-colors
+$background-color: #e5e5e5;
+$second-background-color: #f5f4fa;
+$backgroud-color_main: #2f303a;
+$icons-background-footer: rgba(255, 255, 255, 0.1);
+// border-colors
+$border-color-one: #ececec;
+$border-color-two: #eeeeee;
+// gradients
+$gradient-main: linear-gradient(
+  to top,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+);
+
+// transitions
+$duration: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);

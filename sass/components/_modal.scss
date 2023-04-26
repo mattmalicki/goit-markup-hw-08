@@ -1,0 +1,255 @@
+.backdrop {
+  display: flex;
+  position: fixed;
+  opacity: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  /* animation */
+  transition-property: opacity 1s ease-in-out 50ms;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  /* animation */
+  transition-property: opacity, visibility;
+  transition-delay: 50ms;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.is-hidden .modal {
+  /* animation for window to hide */
+  scale: 0;
+
+  transition-property: scale;
+  transition-delay: 50ms;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.modal {
+  scale: 1;
+  opacity: 1;
+  margin: auto;
+  width: 528px;
+  height: 581px;
+  background: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  /* animation for window to show up */
+  transition-property: opacity, scale;
+  transition-delay: 50ms;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+
+  &__button--close {
+    position: relative;
+    left: calc(100% - 38px);
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    padding: 0;
+  }
+
+  &__button--send {
+    width: 200px;
+    height: 50px;
+    background-color: $functional-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0;
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $white-color;
+
+    transition-property: color, background-color;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      background-color: $white-color;
+      color: $functional-color;
+    }
+  }
+
+  &__form {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: calc(100% - 40px);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    padding: 40px;
+    padding-top: 0;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__fields {
+    &-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 12px;
+      margin-bottom: 10px;
+    }
+    &-header {
+      margin-bottom: 4px;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+
+      color: #757575;
+    }
+  }
+
+  &__field {
+    position: relative;
+
+    &-input {
+      display: block;
+      box-sizing: border-box;
+      height: 40px;
+      outline: none;
+      padding: 11px 0;
+      padding-left: 42px;
+      margin-bottom: 10px;
+      width: 100%;
+
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      color: $black-color;
+
+      /* animations */
+      transition-property: border-color, color;
+      transition-duration: $duration;
+      transition-timing-function: $timing-function;
+
+      &:focus-within,
+      &:focus-within + .icon {
+        border-color: $functional-color;
+        fill: $functional-color;
+
+        /* animation */
+        transition-property: border-color, fill;
+        transition-duration: $duration;
+        transition-timing-function: $timing-function;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      top: 11px;
+      left: 12px;
+    }
+
+    &-textarea {
+      height: 120px;
+      padding: 12px 16px;
+      resize: none;
+      font-size: 12px;
+
+      &::placeholder {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+      }
+    }
+  }
+
+  &__terms {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &-header {
+      position: relative;
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      color: #757575;
+      padding-left: 23px;
+    }
+
+    &-checkbox {
+      display: none;
+    }
+
+    &-icon--checked {
+      position: absolute;
+
+      // icon isn't visible when unchecked
+      opacity: 0;
+
+      transition-property: opacity;
+      transition-duration: $duration;
+      transition-timing-function: $timing-function;
+    }
+
+    &-icon--unchecked {
+      position: absolute;
+      opacity: 1;
+
+      transition-property: opacity;
+      transition-duration: $duration;
+      transition-timing-function: $timing-function;
+    }
+
+    & input[type="checkbox"]:checked + svg + &-icon--unchecked {
+      /* making unchecked icon hidden when checkbox is checked */
+      opacity: 0;
+
+      //   animation
+      transition-property: opacity;
+      transition-duration: $duration;
+      transition-timing-function: $timing-function;
+    }
+    & input[type="checkbox"]:checked + &-icon--checked {
+      /* making checked icon visible when checkbox is checked */
+      opacity: 1;
+
+      //   animation
+      transition-property: opacity;
+      transition-duration: $duration;
+      transition-timing-function: $timing-function;
+    }
+
+    &-link {
+      color: $functional-color;
+    }
+  }
+}
