@@ -13,6 +13,7 @@
     />
     <!-- CSS stylesheet -->
     <link href="./css/main.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
   </head>
   <body>
@@ -45,6 +46,16 @@
             +48 111 111 111
           </a>
         </div>
+
+        <button
+          class="header__menu-button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" class="icon">
+            <use href="./images/icons.svg#icon-mobile-menu">
+          </svg>
+        </button>
       </div>
     </header>
     <main class="section portfolio">
@@ -350,5 +361,33 @@
         </div>
       </div>
     </footer>
+
+    <div class="container header__menu js-menu-container" id="mobile-menu">
+      <button class="header__menu-button header__menu-button--close js-close-menu">
+        <svg width="40" height="40" class="icon">
+        <use href="./images/icons.svg#icon-mobile-menu-close"></use>
+        </svg>
+      </button>
+
+      <nav class="header__menu-nav">
+        <a href="./index.html" class="link">Agencja</a>
+        <a href="./portfolio.html" class="link header--current-page">Porfolio</a>
+        <a href="" class="link">Kontakt</a>
+      </nav>
+      <div class="header__menu-contact-block">
+        <a href="tel:+48111111111" class="link header__menu-phone">
+          +48 111 111 111
+        </a>
+        <a href="mailto:info@devstudio.com" class="link header__menu-email">info@devstudio.com</a>
+        <div class="header__menu-socials">
+          <a href="" class="link header__menu-socials-link">Instagram</a>
+          <a href="" class="link header__menu-socials-link">Twitter </a>
+          <a href="" class="link header__menu-socials-link">Facebook</a>
+          <a href="" class="link header__menu-socials-link">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

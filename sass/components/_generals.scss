@@ -19,14 +19,21 @@ figure {
 }
 
 .section {
-  padding: 94px;
+  padding: 60px 15px;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px;
+  }
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;
   //   centers page
   margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
 }
 
 .list {
@@ -37,12 +44,17 @@ figure {
 .logo {
   font-family: $logoFontFamily;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
 
   &--blue-web {
     color: $functional-color;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
