@@ -7,12 +7,20 @@
 
   &__container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: baseline;
-    gap: 70px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 15px;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      gap: 70px;
+      padding: 60px 0;
+    }
   }
 
   &__logo,
@@ -25,8 +33,15 @@
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 9px;
+
+    &-item {
+      text-align: center;
+
+      @media screen and (min-width: 1200px) {
+        text-align: left;
+      }
+    }
 
     &--margin-bottom {
       // 11px = 20px (figma) - 9px (gap)
@@ -39,10 +54,12 @@
   }
 
   &__connections {
-    // display: flex;
-    // flex-direction: column;
-    // 4px = 20px (figma) - 16px
-    // gap: 4px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
+
     &-header {
       font-style: normal;
       font-weight: 700;
@@ -61,30 +78,50 @@
     }
   }
 
-  &__newsletter-header {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+  &__newsletter {
+    text-align: center;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
+    &-header {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
   }
 
   &__form {
-    display: flex;
-    flex-wrap: nowrap;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 12px;
+    }
 
     &-field {
-      width: 358px;
+      width: 100%;
       height: 50px;
       padding: 15px 16px;
-      margin-right: 12px;
       color: $footer-mail-phone-color;
+      margin-bottom: 20px;
 
       background-color: transparent;
       border: 1px solid rgba(255, 255, 255, 0.3);
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
       border-radius: 4px;
+
+      @media screen and (min-width: 1200px) {
+        width: 358px;
+      }
     }
 
     &-button {

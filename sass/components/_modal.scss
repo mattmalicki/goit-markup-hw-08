@@ -40,8 +40,8 @@
   scale: 1;
   opacity: 1;
   margin: auto;
-  width: 528px;
-  height: 581px;
+  width: calc(100% - 30px);
+  height: 609px;
   background: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -53,6 +53,11 @@
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
 
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+
   &__button--close {
     position: relative;
     left: calc(100% - 38px);
@@ -62,6 +67,7 @@
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    box-shadow: none;
 
     padding: 0;
   }
@@ -132,7 +138,7 @@
       line-height: 1.16;
       letter-spacing: 0.01em;
 
-      color: #757575;
+      color: $second-color;
     }
   }
 
@@ -161,6 +167,7 @@
       &:focus-within,
       &:focus-within + .icon {
         border-color: $functional-color;
+        color: $functional-color;
         fill: $functional-color;
 
         /* animation */
@@ -198,11 +205,16 @@
 
     &-header {
       position: relative;
-      font-size: 14px;
-      line-height: 1.71;
+      font-size: 12px;
+      line-height: 1.16;
       letter-spacing: 0.03em;
       color: #757575;
       padding-left: 23px;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+      }
     }
 
     &-checkbox {

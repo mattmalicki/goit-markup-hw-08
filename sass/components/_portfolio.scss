@@ -1,11 +1,44 @@
 .portfolio {
   &__buttons {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 8px;
-    justify-content: center;
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      & li:nth-of-type(3n + 1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 103px;
+        height: 38px;
+      }
+      & li:nth-of-type(3n + 2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 38px;
+      }
+      & li:nth-of-type(3n + 3) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 145px;
+        height: 38px;
+        margin-bottom: 7px;
+      }
+    }
 
     &-item {
       background-color: $second-background-color;
+      width: 100%;
+      height: 100%;
 
       font-weight: 500;
       font-size: 16px;
@@ -14,7 +47,10 @@
       border: 0;
       border-radius: 4px;
 
-      padding: 6px 22px;
+      @media screen and (min-width: 1200px) {
+        padding: 6px 22px;
+        margin-bottom: 0;
+      }
 
       /* transiton */
 

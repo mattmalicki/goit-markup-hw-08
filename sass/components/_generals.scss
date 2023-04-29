@@ -65,12 +65,16 @@ figure {
 .button {
   cursor: pointer;
   outline: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
   //   transition
-  transition-property: color, background;
+  transition-property: color, background, box-shadow;
   transition-duration: $duration;
   transition-timing-function: $timing-function;
 }
