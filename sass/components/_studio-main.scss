@@ -8,12 +8,54 @@
 
   &--background {
     width: 100%;
-    background: $gradient-main, url(../images/background-main480.jpg), no-repeat,
-      center, 480px;
+    background-image: $gradient-main;
+    background-image: url(../images/background-main.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 767px;
+
+    @media screen and (min-width: 768px) {
+      background-image: $gradient-main;
+      background-image: url(../images/background-main-768.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1199px;
+    }
 
     @media screen and (min-width: 1200px) {
-      background: $gradient-main, url(../images/background-main1200.jpg),
-        no-repeat, center, 1600px;
+      background-image: $gradient-main;
+      background-image: url(../images/background-main-1200.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1600px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      width: 100%;
+      background-image: $gradient-main;
+      background-image: url(../images/background-main@2x.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @media screen and (min-width: 768px) {
+        background-image: $gradient-main;
+        background-image: url(../images/background-main-768@2x.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1199px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        background-image: $gradient-main;
+        background-image: url(../images/background-main-1200@2x.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1600px;
+      }
     }
   }
 
