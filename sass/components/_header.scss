@@ -12,6 +12,11 @@
     align-items: center;
     padding: 10px 15px;
 
+    @media screen and (min-width: 768px) {
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+
     @media screen and (min-width: 1200px) {
       padding-top: 24px;
       padding-bottom: 25px;
@@ -23,7 +28,11 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 93px;
+    gap: 83px;
+
+    @media screen and (min-width: 1200px) {
+      gap: 93px;
+    }
   }
 
   &__logo {
@@ -38,6 +47,12 @@
     display: none;
 
     @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    @media (min-width: 1200px) {
       display: flex;
       align-items: center;
       gap: 46px;
@@ -71,6 +86,14 @@
     display: none;
 
     @media (min-width: 768px) {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
+    }
+
+    @media (min-width: 1200px) {
       display: flex;
       flex-wrap: nowrap;
       gap: 50px;
@@ -84,6 +107,12 @@
     flex-wrap: nowrap;
     align-items: center;
     gap: 10px;
+
+    &--margin-bottom {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &__menu {
