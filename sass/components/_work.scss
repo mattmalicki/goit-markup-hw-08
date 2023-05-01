@@ -1,4 +1,9 @@
 .work {
+  &__section--padding-bottom {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding-bottom: 45px;
+    }
+  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -12,6 +17,10 @@
 
     &-item {
       width: 100%;
+
+      @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px) / 2);
+      }
 
       @media screen and (min-width: 1200px) {
         width: 270px;
