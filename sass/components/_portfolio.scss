@@ -5,12 +5,12 @@
     justify-content: flex-start;
     gap: 8px;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
       flex-wrap: nowrap;
       justify-content: center;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 1199px) {
       & li:nth-of-type(3n + 1) {
         display: flex;
         justify-content: center;

@@ -98,9 +98,13 @@ figure {
   flex-wrap: nowrap;
   gap: 10px;
   padding-top: 16px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 
   &__icon {
     color: $icons-color-one;
