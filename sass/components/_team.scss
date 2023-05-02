@@ -19,8 +19,13 @@
     display: flex;
     gap: 30px;
     &-item {
-      @media screen and (max-width: 767px) {
-        width: 100%;
+      flex-basis: 100%;
+      @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px) / 2);
+      }
+
+      @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 90px) / 4);
       }
     }
   }
