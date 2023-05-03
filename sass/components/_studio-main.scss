@@ -12,22 +12,16 @@
     background-image: url(../images/background-main.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 767px;
+    background-size: cover;
 
     @media screen and (min-width: 768px) {
       background-image: $gradient-main;
       background-image: url(../images/background-main-768.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 1199px;
     }
 
     @media screen and (min-width: 1200px) {
       background-image: $gradient-main;
       background-image: url(../images/background-main-1200.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 1600px;
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -37,24 +31,15 @@
       width: 100%;
       background-image: $gradient-main;
       background-image: url(../images/background-main@2x.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
 
       @media screen and (min-width: 768px) {
         background-image: $gradient-main;
         background-image: url(../images/background-main-768@2x.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
       }
 
       @media screen and (min-width: 1200px) {
         background-image: $gradient-main;
         background-image: url(../images/background-main-1200@2x.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 1600px;
       }
     }
   }
